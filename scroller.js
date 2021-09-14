@@ -13,7 +13,7 @@ function start(feed, windowID) {
 
 function getNews(feed) {
   var newsFeedRequest = new XMLHttpRequest();
-  newsFeedRequest.open("GET", "feedbouncer.php?feed=" + feed, true);
+  newsFeedRequest.open("GET", "https://thingproxy.freeboard.io/fetch/" + feed, true);
   newsFeedRequest.onreadystatechange = processNewsFeed;
   newsFeedRequest.send(null);
 
